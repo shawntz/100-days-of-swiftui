@@ -1,2 +1,3 @@
-# 100-days-of-swiftui
-my progress &amp; accountability as i participate in the Hacking with Swift - 100 Days of SwiftUI Course (https://www.hackingwithswift.com/100/swiftui)
+# 100 Days of SwiftUI
+
+my progress &amp; accountability tracker as i participate in [Paul Hudson’s 100 Days of SwiftUI course](https://www.hackingwithswift.com/100/swiftui)
