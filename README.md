@@ -11,9 +11,10 @@ my progress &amp; accountability tracker as i participate in [Paul Hudson’s 10
     ├── 2-complex-data-types.playground
     ├── 3-conditionals.playground
     ├── 4-loops.playground
-    └── 5-functions.playground
+    ├── 5-functions.playground
+    └── 6-closures.playground
 
-7 directories, 1 file
+8 directories, 1 file
 ```
 ## the course
 | **Day**  | **Topic**                                                                 | **Completed** |
@@ -27,7 +28,7 @@ my progress &amp; accountability tracker as i participate in [Paul Hudson’s 10
 | [Day 6](https://www.hackingwithswift.com/100/swiftui/6)    | Loops, summary, and checkpoint 3                                        | ✅            |
 | [Day 7](https://www.hackingwithswift.com/100/swiftui/7)    | Functions, parameters, and return values                                | ✅            |
 | [Day 8](https://www.hackingwithswift.com/100/swiftui/8)    | Default values, throwing functions, and checkpoint 4                   | ✅            |
-| [Day 9](https://www.hackingwithswift.com/100/swiftui/9)    | Closures, passing functions into functions, and checkpoint 5           | ❌            |
+| [Day 9](https://www.hackingwithswift.com/100/swiftui/9)    | Closures, passing functions into functions, and checkpoint 5           | ✅            |
 | [Day 10](https://www.hackingwithswift.com/100/swiftui/10)  | Structs, computed properties, and property observers                   | ❌            |
 | [Day 11](https://www.hackingwithswift.com/100/swiftui/11)  | Access control, static properties and methods, and checkpoint 6        | ❌            |
 | [Day 12](https://www.hackingwithswift.com/100/swiftui/12)  | Classes, inheritance, and checkpoint 7                                 | ❌            |
