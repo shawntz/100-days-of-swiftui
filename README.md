@@ -12,9 +12,11 @@ my progress &amp; accountability tracker as i participate in [Paul Hudson’s 10
     ├── 3-conditionals.playground
     ├── 4-loops.playground
     ├── 5-functions.playground
-    └── 6-closures.playground
+    ├── 6-closures.playground
+    ├── 7-structs.playground
+    └── 8-access-control.playground
 
-8 directories, 1 file
+10 directories, 1 file
 ```
 ## the course
 | **Day**  | **Topic**                                                                 | **Completed** |
