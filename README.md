@@ -34,7 +34,7 @@ my progress &amp; accountability tracker as i participate in [Paul Hudson’s 10
 | [Day 10](https://www.hackingwithswift.com/100/swiftui/10)  | Structs, computed properties, and property observers                   | ✅            |
 | [Day 11](https://www.hackingwithswift.com/100/swiftui/11)  | Access control, static properties and methods, and checkpoint 6        | ✅            |
 | [Day 12](https://www.hackingwithswift.com/100/swiftui/12)  | Classes, inheritance, and checkpoint 7                                 | ✅            |
-| [Day 13](https://www.hackingwithswift.com/100/swiftui/13)  | Protocols, extensions, and checkpoint 8                                | ❌            |
+| [Day 13](https://www.hackingwithswift.com/100/swiftui/13)  | Protocols, extensions, and checkpoint 8                                | ✅            |
 | [Day 14](https://www.hackingwithswift.com/100/swiftui/14)  | Optionals, nil coalescing, and checkpoint 9                            | ❌            |
 | [Day 15](https://www.hackingwithswift.com/100/swiftui/15)  | Swift review                                                           | ❌            |
 | [Day 16](https://www.hackingwithswift.com/100/swiftui/16)  | Project 1, part one                                                    | ❌            |
