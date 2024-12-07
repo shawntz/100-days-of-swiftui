@@ -7,17 +7,20 @@ my progress &amp; accountability tracker as i participate in [Paul Hudson’s 10
 .
 ├── README.md
 └── core-fundamentals
-    ├── 1-simple-data-types.playground
-    ├── 2-complex-data-types.playground
-    ├── 3-conditionals.playground
-    ├── 4-loops.playground
-    ├── 5-functions.playground
-    ├── 6-closures.playground
-    ├── 7-structs.playground
-    └── 8-access-control.playground
+    ├── 01-simple-data-types.playground
+    ├── 02-complex-data-types.playground
+    ├── 03-conditionals.playground
+    ├── 04-loops.playground
+    ├── 05-functions.playground
+    ├── 06-closures.playground
+    ├── 07-structs.playground
+    ├── 08-access-control.playground
+    ├── 09-classes.playground
+    └── 10-protocols.playground
 
-10 directories, 1 file
+12 directories, 1 file
 ```
+
 ## the course
 | **Day**  | **Topic**                                                                 | **Completed** |
 |:--------:|---------------------------------------------------------------------------|:-------------:|
