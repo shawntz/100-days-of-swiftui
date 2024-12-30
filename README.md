@@ -6,19 +6,24 @@ my progress &amp; accountability tracker as i participate in [Paul Hudson’s 10
 ```
 .
 ├── README.md
-└── core-fundamentals
-    ├── 01-simple-data-types.playground
-    ├── 02-complex-data-types.playground
-    ├── 03-conditionals.playground
-    ├── 04-loops.playground
-    ├── 05-functions.playground
-    ├── 06-closures.playground
-    ├── 07-structs.playground
-    ├── 08-access-control.playground
-    ├── 09-classes.playground
-    └── 10-protocols.playground
+├── core-fundamentals
+│   ├── 01-simple-data-types.playground
+│   ├── 02-complex-data-types.playground
+│   ├── 03-conditionals.playground
+│   ├── 04-loops.playground
+│   ├── 05-functions.playground
+│   ├── 06-closures.playground
+│   ├── 07-structs.playground
+│   ├── 08-access-control.playground
+│   ├── 09-classes.playground
+│   ├── 10-protocols.playground
+│   └── 11-optionals.playground
+├── project-1
+│   └── WeSplit
+└── project-2
+    └── GuessTheFlag
 
-12 directories, 1 file
+17 directories, 1 file
 ```
 
 ## the course
@@ -40,13 +45,13 @@ my progress &amp; accountability tracker as i participate in [Paul Hudson’s 10
 | [Day 13](https://www.hackingwithswift.com/100/swiftui/13)  | Protocols, extensions, and checkpoint 8                                | ✅            |
 | [Day 14](https://www.hackingwithswift.com/100/swiftui/14)  | Optionals, nil coalescing, and checkpoint 9                            | ✅            |
 | [Day 15](https://www.hackingwithswift.com/100/swiftui/15)  | Swift review                                                           | ✅            |
-| [Day 16](https://www.hackingwithswift.com/100/swiftui/16)  | Project 1, part one                                                    | ❌            |
-| [Day 17](https://www.hackingwithswift.com/100/swiftui/17)  | Project 1, part two                                                    | ❌            |
-| [Day 18](https://www.hackingwithswift.com/100/swiftui/18)  | Project 1, part three                                                  | ❌            |
-| [Day 19](https://www.hackingwithswift.com/100/swiftui/19)  | Challenge day                                                          | ❌            |
-| [Day 20](https://www.hackingwithswift.com/100/swiftui/20)  | Project 2, part one                                                    | ❌            |
-| [Day 21](https://www.hackingwithswift.com/100/swiftui/21)  | Project 2, part two                                                    | ❌            |
-| [Day 22](https://www.hackingwithswift.com/100/swiftui/22)  | Project 2, part three                                                  | ❌            |
+| [Day 16](https://www.hackingwithswift.com/100/swiftui/16)  | Project 1, part one                                                    | ✅            |
+| [Day 17](https://www.hackingwithswift.com/100/swiftui/17)  | Project 1, part two                                                    | ✅            |
+| [Day 18](https://www.hackingwithswift.com/100/swiftui/18)  | Project 1, part three                                                  | ✅            |
+| [Day 19](https://www.hackingwithswift.com/100/swiftui/19)  | Challenge day                                                          | ✅            |
+| [Day 20](https://www.hackingwithswift.com/100/swiftui/20)  | Project 2, part one                                                    | ✅            |
+| [Day 21](https://www.hackingwithswift.com/100/swiftui/21)  | Project 2, part two                                                    | ✅            |
+| [Day 22](https://www.hackingwithswift.com/100/swiftui/22)  | Project 2, part three                                                  | ✅            |
 | [Day 23](https://www.hackingwithswift.com/100/swiftui/23)  | Project 3, part one                                                    | ❌            |
 | [Day 24](https://www.hackingwithswift.com/100/swiftui/24)  | Project 3, part two                                                    | ❌            |
 | [Day 25](https://www.hackingwithswift.com/100/swiftui/25)  | Milestone: Projects 1-3                                                | ❌            |
