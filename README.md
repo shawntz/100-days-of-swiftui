@@ -20,10 +20,12 @@ my progress &amp; accountability tracker as i participate in [Paul Hudson’s 10
 │   └── 11-optionals.playground
 ├── project-1
 │   └── WeSplit
-└── project-2
-    └── GuessTheFlag
+├── project-2
+│   └── GuessTheFlag
+└── project-3
+    └── project-3
 
-17 directories, 1 file
+19 directories, 1 file
 ```
 
 ## the course
@@ -52,8 +54,8 @@ my progress &amp; accountability tracker as i participate in [Paul Hudson’s 10
 | [Day 20](https://www.hackingwithswift.com/100/swiftui/20)  | Project 2, part one                                                    | ✅            |
 | [Day 21](https://www.hackingwithswift.com/100/swiftui/21)  | Project 2, part two                                                    | ✅            |
 | [Day 22](https://www.hackingwithswift.com/100/swiftui/22)  | Project 2, part three                                                  | ✅            |
-| [Day 23](https://www.hackingwithswift.com/100/swiftui/23)  | Project 3, part one                                                    | ❌            |
-| [Day 24](https://www.hackingwithswift.com/100/swiftui/24)  | Project 3, part two                                                    | ❌            |
+| [Day 23](https://www.hackingwithswift.com/100/swiftui/23)  | Project 3, part one                                                    | ✅            |
+| [Day 24](https://www.hackingwithswift.com/100/swiftui/24)  | Project 3, part two                                                    | ✅            |
 | [Day 25](https://www.hackingwithswift.com/100/swiftui/25)  | Milestone: Projects 1-3                                                | ❌            |
 | [Day 26](https://www.hackingwithswift.com/100/swiftui/26)  | Project 4, part one                                                    | ❌            |
 | [Day 27](https://www.hackingwithswift.com/100/swiftui/27)  | Project 4, part two                                                    | ❌            |
