@@ -1,4 +1,4 @@
-# 100 Days of SwiftUI
+# 100 Days of SwiftUI ![](https://geps.dev/progress/25)
 
 my progress &amp; accountability tracker as i participate in [Paul Hudson’s 100 Days of SwiftUI course](https://www.hackingwithswift.com/100/swiftui)
 
@@ -18,6 +18,8 @@ my progress &amp; accountability tracker as i participate in [Paul Hudson’s 10
 │   ├── 09-classes.playground
 │   ├── 10-protocols.playground
 │   └── 11-optionals.playground
+├── milestone-1
+│   └── RockPaperScissors
 ├── project-1
 │   └── WeSplit
 ├── project-2
@@ -25,7 +27,7 @@ my progress &amp; accountability tracker as i participate in [Paul Hudson’s 10
 └── project-3
     └── project-3
 
-19 directories, 1 file
+21 directories, 1 file
 ```
 
 ## the course
@@ -56,7 +58,7 @@ my progress &amp; accountability tracker as i participate in [Paul Hudson’s 10
 | [Day 22](https://www.hackingwithswift.com/100/swiftui/22)  | Project 2, part three                                                  | ✅            |
 | [Day 23](https://www.hackingwithswift.com/100/swiftui/23)  | Project 3, part one                                                    | ✅            |
 | [Day 24](https://www.hackingwithswift.com/100/swiftui/24)  | Project 3, part two                                                    | ✅            |
-| [Day 25](https://www.hackingwithswift.com/100/swiftui/25)  | Milestone: Projects 1-3                                                | ❌            |
+| [Day 25](https://www.hackingwithswift.com/100/swiftui/25)  | Milestone: Projects 1-3                                                | ✅            |
 | [Day 26](https://www.hackingwithswift.com/100/swiftui/26)  | Project 4, part one                                                    | ❌            |
 | [Day 27](https://www.hackingwithswift.com/100/swiftui/27)  | Project 4, part two                                                    | ❌            |
 | [Day 28](https://www.hackingwithswift.com/100/swiftui/28)  | Project 4, part three                                                  | ❌            |
