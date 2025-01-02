@@ -18,84 +18,6 @@
 
 import SwiftUI
 
-struct InstructionsView: View {
-    @Environment(\.dismiss) var dismiss
-
-    var body: some View {
-        VStack {
-
-
-            Spacer()
-
-            VStack(spacing: 15) {
-                Text("""
-                    Tap the correct move needed to either
-                    WIN or LOSE again the CPU's choice. 
-                    
-                    Incorrect choices result in -1 points. 
-                    
-                    The game ends after 10 turns!
-                    """
-                )
-//                .multilineTextAlignment(.center)
-                .padding(.vertical, 15)
-                .padding(.horizontal, 20)
-//                .font(.caption)
-                .frame(maxWidth: .infinity, alignment: .bottom)
-                .foregroundStyle(.primary)
-                .clipShape(.rect(cornerRadius: 15))
-            }
-            .frame(width: .infinity, height: .infinity, alignment: .center)
-
-            Spacer()
-
-            HStack() {
-                Spacer()
-
-                Button {
-                    dismiss()
-                } label: {
-                    Image(systemName: "xmark.circle")
-                        .font(.largeTitle)
-                        .foregroundStyle(.gray)
-                }
-            }
-
-
-        }
-        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topTrailing)
-        .padding()
-
-
-
-//        Spacer()
-    }
-}
-
-struct ChoicesView: View {
-    let choices: [String]
-    let number: Int
-    let eval: (Int) -> Void
-
-    var body: some View {
-        Button {
-            // choice was tapped
-            eval(number)
-
-            print(choices[number])
-        } label: {
-            Text(choices[number])
-                .frame(maxWidth: .infinity)
-                .padding()
-                .font(.system(size: 60))
-//                .background(Color(red: 0.53, green: 0.53, blue: 0.53))
-                .background(.regularMaterial)
-                .clipShape(.circle)
-                .shadow(radius: 5)
-        }
-    }
-}
-
 struct CardView: View {
     let choices: [String]
     let number: Int
@@ -123,10 +45,126 @@ struct CardView: View {
         .padding(.vertical, 20)
         .font(.title.bold())
         .foregroundStyle(.white)
-//        .background(Color(red: 0.96, green: 0.43, blue: 0.058))
         .background(Color(red: 0.105, green: 0.105, blue: 0.118))
         .clipShape(.rect(cornerRadius: 15))
         .shadow(radius: 5)
+    }
+}
+
+struct ChoicesView: View {
+    let choices: [String]
+    let number: Int
+    let eval: (Int) -> Void
+
+    var body: some View {
+        Button {
+            eval(number)  // choice was tapped
+        } label: {
+            Text(choices[number])
+                .frame(maxWidth: .infinity)
+                .padding()
+                .font(.system(size: 60))
+                .background(.regularMaterial)
+                .clipShape(.circle)
+                .shadow(radius: 5)
+        }
+    }
+}
+
+struct HeaderView: View {
+    let currentTurn: Int
+    let maxTurns: Int
+
+    init(_ currentTurn: Int, _ maxTurns: Int) {
+        self.currentTurn = currentTurn
+        self.maxTurns = maxTurns
+    }
+
+    var body: some View {
+        Spacer()
+
+        Text("Rock, Paper, Scissors!")
+            .font(.title.bold())
+
+        Text("Round \(currentTurn)/\(maxTurns)")
+            .font(.title2.bold())
+
+        Spacer()
+    }
+}
+
+struct InstructionsView: View {
+    @Environment(\.dismiss) var dismiss
+
+    var body: some View {
+        VStack {
+            Spacer()
+
+            VStack(spacing: 15) {
+                Text("""
+                    Tap the correct move needed to either
+                    WIN or LOSE again the CPU's choice. 
+                    
+                    Incorrect choices result in -1 points. 
+                    
+                    The game ends after 10 turns!
+                    """
+                )
+                .padding(.vertical, 15)
+                .padding(.horizontal, 20)
+                .frame(maxWidth: .infinity, alignment: .bottom)
+                .foregroundStyle(.primary)
+                .clipShape(.rect(cornerRadius: 15))
+            }
+            .frame(width: .infinity, height: .infinity, alignment: .center)
+
+            Spacer()
+
+            HStack() {
+                Spacer()
+
+                Button {
+                    dismiss()
+                } label: {
+                    Image(systemName: "xmark.circle")
+                        .font(.largeTitle)
+                        .foregroundStyle(.gray)
+                }
+            }
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topTrailing)
+        .padding()
+    }
+}
+
+struct ScoreInfoView: View {
+    var playerScore: Int
+    @Binding var showInstructions: Bool
+
+    init(_ playerScore: Int, _ showInstructions: Binding<Bool>) {
+        self.playerScore = playerScore
+        self._showInstructions = showInstructions
+    }
+
+    var body: some View {
+        HStack(alignment: .bottom) {
+            Text("Score: \(playerScore)")
+                .font(.largeTitle.bold())
+
+            Spacer()
+
+            Button {
+                showInstructions.toggle()
+            } label: {
+                Image(systemName: "info.circle")
+                    .foregroundStyle(.gray)
+            } .font(.largeTitle)
+                .sheet(isPresented: $showInstructions) {
+                    InstructionsView()
+                        .presentationDetents([.height(250), .medium, .large])
+                        .presentationDragIndicator(.automatic)
+                }
+        }
     }
 }
 
@@ -137,9 +175,6 @@ struct ContentView: View {
 
     @State private var backgroundColor: Color? = nil
     @State private var isFlashing = false
-
-
-
     @State private var showInstructions: Bool = false
     @State private var gameOver: Bool = false
     @State private var currentTurn: Int = 1
@@ -152,6 +187,10 @@ struct ContentView: View {
 
     @Environment(\.colorScheme) var colorScheme
 
+    var defaultBackgroundColor: Color {
+        colorScheme == .dark ? .black : .white
+    }
+
     var body: some View {
         ZStack {
             (backgroundColor ?? defaultBackgroundColor)
@@ -160,15 +199,7 @@ struct ContentView: View {
 
             VStack {
                 VStack {
-                    Spacer()
-
-                    Text("Rock, Paper, Scissors!")
-                        .font(.title.bold())
-
-                    Text("Round \(currentTurn)/\(maxTurns)")
-                        .font(.title2.bold())
-
-                    Spacer()
+                    HeaderView(currentTurn, maxTurns)
 
                     CardView(choices: choices, number: cpuChoice, outcome: playerShouldWin)
 
@@ -176,41 +207,22 @@ struct ContentView: View {
 
                     HStack {
                         ForEach(0..<3) { choice in
-//                            ChoicesView(choices: choices, number: choice, eval: userTapped)
                             ChoicesView(choices: choices, number: choice, eval: { index in
                                 flashBackground(condition: userTapped(index))
                             })
                         }
                     }
+
                     Spacer()
 
-                    HStack(alignment: .bottom) {
-                        Text("Score: \(playerScore)")
-                            .font(.largeTitle.bold())
-
-                        Spacer()
-
-                        Button {
-                            showInstructions.toggle()
-                        } label: {
-                            Image(systemName: "info.circle")
-                                .foregroundStyle(.gray)
-                        } .font(.largeTitle)
-                            .sheet(isPresented: $showInstructions) {
-                                InstructionsView()
-                                    .presentationDetents([.height(250), .medium, .large])
-                                    .presentationDragIndicator(.automatic)
-                            }
-                    }
+                    ScoreInfoView(playerScore, $showInstructions)
 
                 }
                 .padding()
                 .frame(
                     maxWidth: .infinity,
                     maxHeight: .infinity
-                    //            alignment: .leading
                 )
-                //            .background(.primary)
             }
             .alert("Game Over!", isPresented: $gameOver) {
                 Button("Play again!", role: .cancel, action: restartGame)
@@ -218,49 +230,6 @@ struct ContentView: View {
                 Text("Final Score: \(playerScore)")
             }
         }
-    }
-
-    var defaultBackgroundColor: Color {
-        colorScheme == .dark ? .black : .white
-    }
-
-    func userTapped(_ number: Int) -> Bool {
-        let correctAnswer = answers[cpuChoice]
-        let userAnswer = choices[number]
-        var isCorrect: Bool
-
-        print("\(userAnswer) <--> \(correctAnswer)")
-
-        if playerShouldWin {
-            print("player should win:")
-            if userAnswer == correctAnswer {
-                playerScore += 1
-                isCorrect = true
-            } else {
-                playerScore -= 1
-                isCorrect = false
-            }
-        } else {
-            print("player should lose:")
-
-            if userAnswer != correctAnswer && userAnswer != choices[cpuChoice] {
-                playerScore += 1
-                isCorrect = true
-            } else {
-                playerScore -= 1
-                isCorrect = false
-            }
-        }
-
-        if currentTurn == maxTurns {
-            gameOver.toggle()
-        } else {
-            currentTurn += 1
-        }
-
-        makeCPUMove()
-
-        return isCorrect
     }
 
     func flashBackground(condition: Bool) {
@@ -300,6 +269,27 @@ struct ContentView: View {
         } while newMove == prevGoal
         prevGoal = newMove
         return newMove
+    }
+
+    func userTapped(_ number: Int) -> Bool {
+        let correctAnswer = answers[cpuChoice]
+        let userAnswer = choices[number]
+
+        let isCorrect = playerShouldWin
+        ? userAnswer == correctAnswer
+        : userAnswer != correctAnswer && userAnswer != choices[cpuChoice]
+
+        playerScore += isCorrect ? 1 : -1
+
+        if currentTurn == maxTurns {
+            gameOver.toggle()
+        } else {
+            currentTurn += 1
+        }
+
+        makeCPUMove()
+
+        return isCorrect
     }
 }
 
