@@ -1,4 +1,4 @@
-# 100 Days of SwiftUI ![](https://geps.dev/progress/25)
+# 100 Days of SwiftUI ![](https://geps.dev/progress/25?dangerColor=006600&warningColor=006600&successColor=006600)
 
 my progress &amp; accountability tracker as i participate in [Paul Hudson’s 100 Days of SwiftUI course](https://www.hackingwithswift.com/100/swiftui)
 
